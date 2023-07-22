@@ -1,0 +1,28 @@
+[
+    {
+        "material_id": "RM00221",
+        "name": "Ethyl Acetate",
+        "quantity": "10"
+      
+    },
+    {
+        "material_id": "RM00227",
+        "name": "Ethyl Butyrate",
+        "quantity": "5"
+    },
+    {
+        "material_id": "RM00218",
+        "name": "Ethyl-2 Methyl Butyrate",
+        "quantity": "15"
+    },
+    {
+        "material_id": "RM00284",
+        "name": "Acetic Acid",
+        "quantity": "25"
+    },
+    {
+        "material_id": "RM00345",
+        "name": "Linalool",
+        "quantity": "6" 
+    }
+]
