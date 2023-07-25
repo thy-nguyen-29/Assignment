@@ -89,7 +89,11 @@ app.post('/api/items/add-item', async (req, res) => {
 
 // Edit an existing item
 app.put('/api/items/edit/:id', async (req, res) => {
-    const updatedItem = { name: 'Lemon Oil CP', id: 'RM00516', quantity: 10 };
+    const updatedItem = { 
+      name: req.body.name, 
+      id: req.body.name, 
+      quantity: req.body.quantity 
+    };
     try {
       const updateResult = await db.updateItemById(updatedItem, req.params.id);
       res.json({ message: 'Material updated successfully.' });
