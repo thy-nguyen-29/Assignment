@@ -10,7 +10,13 @@ const HTTP_PORT = process.env.PORT || 8080;
 
 require('dotenv').config({ path: './.env' });
 
-app.use(cors());
+const corsOptions = {
+  origin: 'http://your-frontend-domain.com',
+  methods: 'GET,POST,PUT,DELETE',
+  allowedHeaders: 'Content-Type,Authorization',
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Add support for incoming JSON entities
