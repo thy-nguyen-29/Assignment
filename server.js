@@ -10,13 +10,13 @@ const HTTP_PORT = process.env.PORT || 8080;
 
 require('dotenv').config({ path: './.env' });
 
-const corsOptions = {
-  origin: 'https://inventory-management-app.cyclic.app',
-  methods: 'GET,POST,PUT,DELETE',
-  allowedHeaders: 'Content-Type,Authorization',
-};
+// const corsOptions = {
+//   origin: 'https://inventory-management-app.cyclic.app',
+//   methods: 'GET,POST,PUT,DELETE',
+//   allowedHeaders: 'Content-Type,Authorization',
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 // Add support for incoming JSON entities
