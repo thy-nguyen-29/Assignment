@@ -11,7 +11,7 @@ const HTTP_PORT = process.env.PORT || 8080;
 require('dotenv').config({ path: './.env' });
 
 const corsOptions = {
-  origin: 'http://your-frontend-domain.com',
+  origin: 'https://inventory-management-app.cyclic.app',
   methods: 'GET,POST,PUT,DELETE',
   allowedHeaders: 'Content-Type,Authorization',
 };
