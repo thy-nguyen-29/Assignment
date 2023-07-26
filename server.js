@@ -96,7 +96,7 @@ app.post('/api/items/add-item', async (req, res) => {
 // Edit an existing item
 app.put('/api/items/edit/:_id', async (req, res) => {
     const updatedItem = { 
-      _id: req.body._id, 
+      _id: req.params._id, 
       id: req.body.id, 
       name: req.body.name, 
       quantity: req.body.quantity 
