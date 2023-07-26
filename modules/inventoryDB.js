@@ -81,7 +81,4 @@ module.exports = class InventoryDB {
   }
 
 
- 
-  
- 
 }
