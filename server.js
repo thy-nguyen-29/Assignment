@@ -94,7 +94,7 @@ app.post('/api/items/add-item', async (req, res) => {
 });
 
 // Edit an existing item
-app.put('/api/items/edit/:id', async (req, res) => {
+app.put('/api/items/edit/:_id', async (req, res) => {
     const updatedItem = { 
       name: req.body.name, 
       id: req.body.id, 
