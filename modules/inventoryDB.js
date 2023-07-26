@@ -63,8 +63,8 @@ module.exports = class InventoryDB {
     return material;
   }
 
-  updateItemById(data, id) {
-    return this.Invent.updateOne({ id: id }, { $set: data }).exec();
+  updateItemById(data, _id) {
+    return this.Invent.updateOne({ _id: _id }, { $set: data }).exec();
   }
 
   deleteItemById(id) {
