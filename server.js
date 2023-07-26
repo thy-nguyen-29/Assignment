@@ -101,7 +101,7 @@ app.put('/api/items/edit/:_id', async (req, res) => {
       quantity: req.body.quantity 
     };
     try {
-      const updateResult = await db.updateItemById(updatedItem, req.params.id);
+      const updateResult = await db.updateItemById(updatedItem, req.params._id);
       res.json({ message: 'Material updated successfully.' });
       return updateResult;
     } catch (error) {
