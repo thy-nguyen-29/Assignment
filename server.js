@@ -10,12 +10,6 @@ const HTTP_PORT = process.env.PORT || 8080;
 
 require('dotenv').config({ path: './.env' });
 
-// const corsOptions = {
-//   origin: 'https://inventory-management-app.cyclic.app',
-//   methods: 'GET,POST,PUT,DELETE',
-//   allowedHeaders: 'Content-Type,Authorization',
-// };
-
 app.use(cors());
 app.use(express.json());
 
@@ -71,26 +65,19 @@ app.get('/api/items/:id', async (req, res) => {
   }
 });
 
-
-
-// Add new item
-// app.post('/inventory', (req, res) => {
-//   const InventoryData = req.body;
-//   res.send('Material added successfully');
-// });
-
-
 // Add new item
 app.post('/api/items/add-item', async (req, res) => {
   
-    try {
-      const newItem = await db.addNewItem(req.body);
-      res.status(201).json(newItem);
-      res.json({ message: 'Item added successfully.' });
+  try {
+    const newItem = await db.addNewItem(req.body);
+    res.status(201).json({
+      message: 'Item added successfully.',
+      item: newItem,
+    });
 
-    } catch (error) {
-      res.status(500).json({ error: 'Failed to add new item.' });
-    }
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to add new item.' });
+  }
 });
 
 // Edit an existing item

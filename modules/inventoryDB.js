@@ -80,5 +80,4 @@ module.exports = class InventoryDB {
     return this.Invent.updateOne({ name: name }, { $set: data }).exec();
   }
 
-
 }
