@@ -98,9 +98,9 @@ app.put('/api/items/edit/:_id', async (req, res) => {
 });
 
 // Delete an item
-app.delete('/api/items/remove/:id', async (req, res) => {
+app.delete('/api/items/remove/:_id', async (req, res) => {
     try {
-      const deleteResult = await db.deleteItemById(req.params.id);
+      const deleteResult = await db.deleteItemById(req.params._id);
 
       if (deleteResult.deletedCount === 1) {
         res.json({ message: 'Material deleted successfully.' });

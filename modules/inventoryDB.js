@@ -67,8 +67,8 @@ module.exports = class InventoryDB {
     return this.Invent.updateOne({ _id: _id }, { $set: data }).exec();
   }
 
-  deleteItemById(id) {
-    return this.Invent.deleteOne({ id: id }).exec();
+  deleteItemById(_id) {
+    return this.Invent.deleteOne({ _id: _id }).exec();
   }
 
   async getItemByName(name) {
